@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/aifivem/ai-garages/compare/v0.3.0...v0.3.1) (2026-11-15)
+
+
+### Code Refactoring
+
+* **web:** individual translate / scale / rotate utilities instead of arbitrary transforms (CEF 144) ([e0696b2](https://github.com/aifivem/ai-garages/commit/e0696b20c5b191d24cdbfa970a5538e32d5e619a))
+
 ## [0.3.0](https://github.com/aifivem/ai-garages/compare/v0.2.4...v0.3.0) (2026-11-02)
 
 
