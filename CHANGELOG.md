@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/aifivem/ai-garages/compare/v0.3.1...v0.3.2) (2026-11-16)
+
+
+### Code Refactoring
+
+* **garages:** parked condition through lib vehicleCondition (damage on FiveM Enhanced) ([3c3c092](https://github.com/aifivem/ai-garages/commit/3c3c0927174d1c9e59e191f2c3879659bd47361a))
+
 ## [0.3.1](https://github.com/aifivem/ai-garages/compare/v0.3.0...v0.3.1) (2026-11-15)
 
 
