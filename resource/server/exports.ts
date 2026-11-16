@@ -1,6 +1,5 @@
-import { online, registerExport } from "@aifivem/lib/server";
+import { online, registerExport, vehicleCondition } from "@aifivem/lib/server";
 import type { GaragedVehicle } from "@aifivem/shared";
-import { condition } from "./condition";
 import { vehiclesApi } from "./core";
 import { garages } from "./panel";
 
@@ -14,7 +13,7 @@ function ownedId(entity: unknown): number | null {
 registerExport("ImpoundVehicle", (entity: unknown) => {
   const id = ownedId(entity);
   if (id === null) return false;
-  vehiclesApi.SaveVehicle(id, condition(entity as number));
+  vehiclesApi.SaveVehicle(id, vehicleCondition(entity as number));
   vehiclesApi.StoreVehicle(id, null, "impound");
   return true;
 });
@@ -22,7 +21,7 @@ registerExport("StoreVehicle", (entity: unknown, garageId: unknown) => {
   const id = ownedId(entity);
   const garage = typeof garageId === "string" ? garages.get(garageId) : null;
   if (id === null || !garage || garage.impound) return false;
-  vehiclesApi.SaveVehicle(id, condition(entity as number));
+  vehiclesApi.SaveVehicle(id, vehicleCondition(entity as number));
   vehiclesApi.StoreVehicle(id, garage.id, "garage");
   return true;
 });

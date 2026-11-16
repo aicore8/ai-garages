@@ -2,18 +2,13 @@ import {
   aiLog,
   entityCoords,
   onClientCallback,
+  vehicleCondition,
   vehicleFromNet,
 } from "@aifivem/lib/server";
-import {
-  fail,
-  readId,
-  readText,
-  toVehicleProps,
-} from "@aifivem/lib/shared";
+import { fail, readId, readText, toVehicleProps } from "@aifivem/lib/shared";
 import { EVENTS } from "common/garages";
 import { mayUse } from "../access";
 import { inArea, inGarage } from "../area";
-import { condition } from "../condition";
 import { vehiclesApi } from "../core";
 import { garages } from "../panel";
 import { parkableBy } from "./parkable";
@@ -46,7 +41,7 @@ onClientCallback(
     if (!mayUse(source, garage, vehicle)) return fail("GARAGE_ERR_NOT_YOURS");
     vehiclesApi.SaveVehicle(id, {
       props: parkedProps(props, vehicle, entity),
-      ...condition(entity),
+      ...vehicleCondition(entity),
     });
     vehiclesApi.StoreVehicle(id, garage.id, "garage");
     aiLog("garage", `parked ${vehicle.plate} in ${garage.id}`, {
