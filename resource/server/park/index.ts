@@ -4,8 +4,8 @@ import {
   onClientCallback,
   vehicleCondition,
   vehicleFromNet,
-} from "@aifivem/lib/server";
-import { fail, readId, readText, toVehicleProps } from "@aifivem/lib/shared";
+} from "@aicore8/lib/server";
+import { fail, readId, readText, toVehicleProps } from "@aicore8/lib/shared";
 import { EVENTS } from "common/garages";
 import { mayUse } from "../access";
 import { inArea, inGarage } from "../area";

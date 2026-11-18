@@ -1,5 +1,5 @@
-import { entityCoords } from "@aifivem/lib/server";
-import { flatDistance } from "@aifivem/lib/shared";
+import { entityCoords } from "@aicore8/lib/server";
+import { flatDistance } from "@aicore8/lib/shared";
 import type { Garage } from "common/garages";
 
 /** A point is inside the garage's area (plus `slack` metres). */

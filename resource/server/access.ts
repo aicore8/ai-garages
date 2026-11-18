@@ -1,6 +1,6 @@
-import { online } from "@aifivem/lib/server";
-import { isPublic } from "@aifivem/lib/shared";
-import type { OwnedVehicle, VehicleOwner } from "@aifivem/shared";
+import { online } from "@aicore8/lib/server";
+import { isPublic } from "@aicore8/lib/shared";
+import type { OwnedVehicle, VehicleOwner } from "@aicore8/shared";
 import type { Garage } from "common/garages";
 import { vehiclesApi } from "./core";
 

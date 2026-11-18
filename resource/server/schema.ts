@@ -4,8 +4,8 @@ import {
   BLIP_STYLE_FIELDS,
   PLACE_PED_SPEC,
   placePedFields,
-} from "@aifivem/lib/shared";
-import type { PanelSchema } from "@aifivem/shared";
+} from "@aicore8/lib/shared";
+import type { PanelSchema } from "@aicore8/shared";
 import { DEFAULT_BLIPS } from "common/garages";
 
 const BLIP = {

@@ -1,5 +1,5 @@
-import { onCache, onMembershipChange } from "@aifivem/lib/client";
-import { isRecord, readId } from "@aifivem/lib/shared";
+import { onCache, onMembershipChange } from "@aicore8/lib/client";
+import { isRecord, readId } from "@aicore8/lib/shared";
 import { world } from "../world";
 import { garages, page } from "./garages";
 
